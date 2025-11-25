@@ -6,7 +6,7 @@
     <title>TechGyver Engineering Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles (unchanged from previous example) */
         body {
@@ -47,9 +47,13 @@
             padding: 3rem 1rem;
             text-align: center;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin: 1rem auto; /* Center the section */
-            width: 80%; /* Match container width */
+            margin: 1rem auto;
+            width: 80%;
             border-radius: 8px;
+            position: relative;
+			display: flex; /* Added */
+			flex-direction: column; /* Added */
+            align-items: center; /* Added */
         }
         .intro h2 {
             font-size: 2.5rem;
@@ -58,7 +62,14 @@
         .intro p {
             font-size: 1.2rem;
             color: #555;
+			text-align: justify; /* Added to improve text flow */
         }
+		.intro img {
+			width: 200px;
+			border-radius: 50%;
+			box-shadow: 0 0 5px rgba(0,0,0,0.3);
+			margin-bottom: 1rem; /* Added */
+		}
         .container {
             width: 80%;
             margin: auto;
@@ -133,8 +144,9 @@
                 text-align: center;
             }
             .intro {
-                width: 95%; /* Full width on mobile */
+                width: 95%;
                 padding: 2rem 0.5rem;
+				flex-direction: column; /* Added - ensure still column on mobile */
             }
             .intro h2 {
                 font-size: 1.8rem;
@@ -142,6 +154,10 @@
             .intro p {
                 font-size: 1rem;
             }
+			.intro img {
+				width: 150px;
+				margin-bottom: 0.5rem; /* Added */
+			}
             .container {
                 width: 95%;
                 padding: 1.5rem 0.5rem;
@@ -154,7 +170,7 @@
             }
             /* Mobile adjustments for projects gallery */
             .project-item {
-                width: 90%; /* Full width on mobile */
+                width: 90%;
                 margin: 0.5rem auto;
             }
         }
@@ -171,6 +187,7 @@
     </nav>
     <section class="intro">
         <h2>Ready to Engineer the Future?</h2>
+		<img src="TechGyver.jpg" alt="TechGyver Photo">
         <p>I'm James Erwin Damit, a passionate system engineer specializing in hardware programming, IoT solutions, and embedded systems. I thrive on challenges and am dedicated to crafting innovative, efficient, and scalable solutions that drive technological advancement. Explore my projects below and let's connect to build the next generation of smart devices!</p>
     </section>
     <section id="about" class="container about">
@@ -188,11 +205,11 @@
                 <p>POLLD WLS for Flood Monitoring</p>
             </div>
             <div class="project-item">
-                <img src="project2.jpg" alt="Project 2">
+                <img src="project2.jpg" alt="Onsite installation and programming of WLS">
                 <p>Onsite installation and programming of WLS</p>
             </div>
             <div class="project-item">
-                <img src="project3.jpg" alt="Project 3">
+                <img src="project3.jpg" alt="LoRa Based Systems">
                 <p>LoRa Based Systems</p>
             </div>
         </div>
