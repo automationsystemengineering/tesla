@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:image" content="https://polldesc.github.io/techgyver/techgyver.jpg">
     <title>TechGyver Engineering Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Meta Tags for Thumbnail Image -->
+    <meta property="og:image" content="https://polldesc.github.io/techgyver/TechGyver.jpg">
+    <meta name="twitter:image" content="https://polldesc.github.io/techgyver/TechGyver.jpg">
+
     <style>
         /* General Styles (unchanged from previous example) */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
+            background-image: url('background.jpg'); /* Keep background image */
             background-size: cover;
             background-position: center;
         }
         header {
-            background-color: #2a623d;
+            background-color: #001BB7;
             color: #fff;
             padding: 2rem 0;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         nav {
-            background-color: #333;
+            background-color: #393D7E;
             color: #fff;
             padding: 0.5rem 0;
             text-align: center;
@@ -43,51 +47,45 @@
         nav a:hover {
             background-color: #555;
         }
-        .intro {
-            background-color: #fff;
+        .intro, .about, .projects, .contact-info { /* Apply width to all sections */
+            background-color: #393D7E; /* Dark theme background for intro */
+            color: #fff; /* White text for intro */
             padding: 3rem 1rem;
             text-align: center;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin: 1rem auto;
-            width: 80%;
+            width: 80%; /* Same width for all sections */
             border-radius: 8px;
             position: relative;
-			display: flex; /* Added */
-			flex-direction: column; /* Added */
-            align-items: center; /* Added */
+			display: flex;
+			flex-direction: column;
+            align-items: center;
         }
-        .intro h2 {
+        .intro h2, .about h2, .projects h2, .contact-info h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: #fff; /* White text for intro heading */
         }
-        .intro p {
+        .intro p, .about p, .projects p, .contact-info p {
             font-size: 1.2rem;
-            color: #555;
-			text-align: justify; /* Added to improve text flow */
+            color: #fff; /* White text for intro paragraph */
+			text-align: justify;
         }
 		.intro img {
 			width: 200px;
 			border-radius: 50%;
 			box-shadow: 0 0 5px rgba(0,0,0,0.3);
-			margin-bottom: 1rem; /* Added */
+			margin-bottom: 1rem;
 		}
-        .container {
+        .container { /* Remove default styling from container */
             width: 80%;
             margin: auto;
             overflow: hidden;
             padding: 2rem 1rem;
-            background-color: #fff;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border-radius: 8px;
         }
-        .about {
-            padding: 2rem 0;
-            text-align: center;
-        }
-        .contact-info {
-            padding: 1rem 0;
-            text-align: center;
-        }
+
         /* Projects Styles */
         .projects-gallery {
             display: flex;
@@ -111,6 +109,7 @@
         .project-item p {
             padding: 0.5rem;
             text-align: center;
+            color: #fff; /* White text for project descriptions */
         }
         footer {
             background-color: #2a623d;
@@ -144,22 +143,22 @@
                 padding: 0.5rem;
                 text-align: center;
             }
-            .intro {
+            .intro, .about, .projects, .contact-info {
                 width: 95%;
                 padding: 2rem 0.5rem;
-				flex-direction: column; /* Added - ensure still column on mobile */
+				flex-direction: column;
             }
-            .intro h2 {
+            .intro h2, .about h2, .projects h2, .contact-info h2 {
                 font-size: 1.8rem;
             }
-            .intro p {
+            .intro p, .about p, .projects p, .contact-info p {
                 font-size: 1rem;
             }
 			.intro img {
 				width: 150px;
-				margin-bottom: 0.5rem; /* Added */
+				margin-bottom: 0.5rem;
 			}
-            .container {
+            .container { /* Remove default styling from container */
                 width: 95%;
                 padding: 1.5rem 0.5rem;
             }
@@ -188,21 +187,21 @@
     </nav>
     <section class="intro">
         <h2>Ready to Engineer the Future?</h2>
-		<img src="techgyver.jpg" alt="TechGyver Photo">
+		<img src="TechGyver.jpg" alt="TechGyver Photo">
         <p>I'm James Erwin Damit, a passionate system engineer specializing in hardware programming, IoT solutions, and embedded systems. I thrive on challenges and am dedicated to crafting innovative, efficient, and scalable solutions that drive technological advancement. Explore my projects below and let's connect to build the next generation of smart devices!</p>
     </section>
-    <section id="about" class="container about">
+    <section id="about" class="about">
         <h2>About Me</h2>
         <p>
             Hello! I'm James Erwin Damit, and I'm passionate about system engineering.
             I live in beautiful Bukidnon, Philippines, and I enjoy Embedded Systems, Arduino Programming, and IoT Solutions.
         </p>
     </section>
-    <section id="projects" class="container">
+    <section id="projects" class="projects">
         <h2>My Projects</h2>
         <div class="projects-gallery">
             <div class="project-item">
-                <img src="project1.jpg" alt="Project 1">
+                <img src="project1.jpg" alt="POLLD WLS for Flood Monitoring">
                 <p>POLLD WLS for Flood Monitoring</p>
             </div>
             <div class="project-item">
@@ -215,7 +214,7 @@
             </div>
         </div>
     </section>
-    <section id="contact" class="container contact-info">
+    <section id="contact" class="contact-info">
         <h2>Contact Information</h2>
         <p>
             Email: <a href="mailto:jedabchannel@gmail.com">jedabchannel@gmail.com</a><br>
@@ -227,5 +226,3 @@
     </footer>
 </body>
 </html>
-
-
